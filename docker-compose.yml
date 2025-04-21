@@ -1,6 +1,5 @@
 services:
   arpwatch:
-    #image: arpwatch:latest
     build: .
     container_name: arpwatch
     privileged: true
