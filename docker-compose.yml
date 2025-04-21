@@ -10,9 +10,9 @@ services:
       - ./varlib-arpwatch:/var/lib/arpwatch
       - /usr/share/arpwatch:/usr/share/arpwatch:ro
     environment:
-      - SMTP_HOST=192.168.1.7
+      - SMTP_HOST=192.168.1.x
       - ARPWATCH_INTERFACE=br0
-      - MAIL_TO=lutz@legutke.local
-      - MAIL_FROM=root@legutke.local
-      - POSTFIX_MYORIGIN=legutke.local
-      - POSTFIX_MYHOSTNAME=arpwatch.legutke.local
+      - MAIL_TO=xxxx@xxxx.local
+      - MAIL_FROM=root@xxxx.local
+      - POSTFIX_MYORIGIN=xxxx.local
+      - POSTFIX_MYHOSTNAME=arpwatch.xxxx.local
