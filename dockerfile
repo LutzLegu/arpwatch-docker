@@ -9,7 +9,7 @@ RUN zypper --non-interactive up && \
 # Use sed to replace line
 # Postfix Empfang auf Port 25 aus
 RUN sed -i 's/^\(smtp.*inet.*\)/#####\1/' /etc/postfix/master.cf
-RUN sed -i '1 i root: lutz@legutke.local' /etc/aliases
+RUN sed -i '1 i root: xxxx@xxxx.local' /etc/aliases
 RUN newaliases
 
 # /etc/mailrc Initialisierung
