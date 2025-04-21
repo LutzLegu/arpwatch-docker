@@ -1,0 +1,18 @@
+services:
+  arpwatch:
+    #image: arpwatch:latest
+    build: .
+    container_name: arpwatch
+    privileged: true
+    network_mode: host
+    restart: always
+    volumes:
+      - ./varlib-arpwatch:/var/lib/arpwatch
+      - /usr/share/arpwatch:/usr/share/arpwatch:ro
+    environment:
+      - SMTP_HOST=192.168.1.7
+      - ARPWATCH_INTERFACE=br0
+      - MAIL_TO=lutz@legutke.local
+      - MAIL_FROM=root@legutke.local
+      - POSTFIX_MYORIGIN=legutke.local
+      - POSTFIX_MYHOSTNAME=arpwatch.legutke.local
